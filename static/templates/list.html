@@ -1,0 +1,27 @@
+<table cellpadding="10" cellspacing="0">
+	<thead>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Surname</th>
+		<th>Salary</th>
+	</thead>
+
+	<tbody>
+		{{#each employees as |employee|}}
+			<tr>
+				<td>
+					{{employee.id}}
+				</td>
+				<td>
+					{{employee.name}}
+				</td>
+				<td>
+					{{employee.surname}}
+				</td>
+				<td>
+					{{employee.salary}}
+				</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
