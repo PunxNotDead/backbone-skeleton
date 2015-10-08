@@ -9,7 +9,7 @@ requirejs.config({
 		backbone: 'vendor/backbone-min',
 		text: 'vendor/text',
 		handlebars: 'vendor/handlebars-v4.0.2',
-		app: 'main'
+		router: 'router'
 	},
 
 	shim: {
@@ -25,6 +25,6 @@ requirejs.config({
 	}
 });
 
-requirejs(['app'], function(app) {
+requirejs(['router'], function(router) {
 
 });

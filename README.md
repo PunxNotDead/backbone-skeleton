@@ -1,6 +1,6 @@
 # Test task 
 
-Using express + Angular.js
+Using express + Backbone.js + Require.js
 
 # Install
 

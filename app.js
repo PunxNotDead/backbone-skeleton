@@ -16,7 +16,7 @@ app.use(methodOverride());
 app.use(expressDomainMiddleware); 
 app.use(express.static('static'));
 
-app.use('/api/users', usersRouter);
+app.use('/api', usersRouter);
 
 app.use(function(err, req, res, next) {
 	res.status(500).send({ errors: [ err.toString() ] });

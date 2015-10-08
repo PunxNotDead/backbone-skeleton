@@ -1,27 +1,41 @@
-<table cellpadding="10" cellspacing="0">
-	<thead>
-		<th>ID</th>
-		<th>Name</th>
-		<th>Surname</th>
-		<th>Salary</th>
-	</thead>
+<nav class="menu">
+	<button class="add-record">
+		Add record
+	</button>
+</nav>
 
-	<tbody>
-		{{#each employees as |employee|}}
-			<tr>
-				<td>
-					{{employee.id}}
-				</td>
-				<td>
-					{{employee.name}}
-				</td>
-				<td>
-					{{employee.surname}}
-				</td>
-				<td>
-					{{employee.salary}}
-				</td>
-			</tr>
-		{{/each}}
-	</tbody>
-</table>
+{{#if employees.length}}
+	<table cellpadding="10" cellspacing="0">
+		<thead>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Surname</th>
+			<th>Salary</th>
+			<th>Actions</th>
+		</thead>
+
+		<tbody>
+			{{#each employees as |employee|}}
+				<tr>
+					<td>
+						{{employee.id}}
+					</td>
+					<td>
+						{{employee.name}}
+					</td>
+					<td>
+						{{employee.surname}}
+					</td>
+					<td>
+						{{employee.salary}}
+					</td>
+					<td>
+						<a href="#/user/edit/{{employee.id}}">Edit</a>
+					</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+{{else}}
+	No records.
+{{/if}}
