@@ -1,43 +1,25 @@
-<table cellpadding="10" cellspacing="0">
-	<tbody>
-		<tr rv-show="model:id">
-			<th>
-				ID
-			</th>
-			<td>
-				<span rv-text="model:id"></span>
-			</td>
-		</tr>
-		<tr>
-			<th>
-				Name
-			</th>
-			<td>
-				<input type="text" class="employee-name" rv-value="model:name">
-			</td>
-		</tr>
-		<tr>
-			<th>
-				Surname
-			</th>
-			<td>
-				<input type="text" class="employee-surname" rv-value="model:surname">
-			</td>
-		</tr>
-		<tr>
-			<th>
-				Salary
-			</th>
-			<td>
-				<input type="number" class="employee-salary" rv-value="model:salary">
-			</td>
-		</tr>
-	</tbody>
-</table>
+<form>
+	<div class="form-group">
+		<label for="user-id">ID</label>
+		<span id="user-id" rv-text="model:id"></span>
+	</div>
+	<div class="form-group">
+		<label for="user-name">Name</label>
+		<input type="text" class="form-control" id="user-name" placeholder="Username" rv-value="model:name">
+	</div>
+	<div class="form-group">
+		<label for="user-surname">Surname</label>
+		<input type="text" class="form-control" id="user-surname" placeholder="Surname" rv-value="model:surname">
+	</div>
+	<div class="form-group">
+		<label for="user-salary">Salary</label>
+		<input type="number" class="form-control" id="user-salary" placeholder="Salary" rv-value="model:salary">
+	</div>
+</form>
 
 <div class="error">
 </div>
 
-<button class="save-record">
+<button class="save-record btn btn-primary">
 	Save
 </button>

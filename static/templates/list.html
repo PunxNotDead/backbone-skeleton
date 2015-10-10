@@ -1,24 +1,34 @@
-<nav class="menu">
-	<button class="add-record">
-		Add record
-	</button>
-</nav>
+<div class="row">
+	<form class="col-xs-6">
+		<div class="form-group">
+			<label for="filter-surname">
+				Filter by surname
+			</label>
+			<input type="text" class="form-control filter-surname" id="filter-surname" placeholder="Enter surname">
+		</div>
+	</form>
+	<div class="form-group text-right col-xs-6">
+		<button class="add-record btn btn-default">
+			Add record
+		</button>
+	</div>
 
-<label for="filter-surname">
-	Filter by surname
-</label>
-<input type="text" class="filter-surname" id="filter-surname">
+</div>
 
-<table cellpadding="10" cellspacing="0" class="users-table">
-	<thead>
-		<th>ID</th>
-		<th>Name</th>
-		<th>Surname</th>
-		<th>Salary</th>
-		<th>Actions</th>
-	</thead>
+<div class="row">
+	<div class="col-xs-12">
+		<table class="users-table table table-striped">
+			<thead>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>Salary</th>
+				<th>Actions</th>
+			</thead>
 
-	<tbody>
+			<tbody class="users-content">
 
-	</tbody>
-</table>
+			</tbody>
+		</table>
+	</div>
+</div>

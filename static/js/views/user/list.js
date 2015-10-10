@@ -48,7 +48,7 @@ define(
 
 				this.employees.fetch({
 					success: function (response) {
-						var container = self.$el.find('.users-table tbody');
+						var container = self.$el.find('.users-table .users-content');
 						container.append(self.listTemplate({
 							employees: self.employees.toJSON()
 						}));
@@ -61,7 +61,7 @@ define(
 			filterBySurname: function(event) {
 				var el = $(event.currentTarget);
 
-				this.$el.find('.users-table tbody').html('');
+				this.$el.find('.users-table .users-content').html('');
 				this.employees.surname = el.val();
 				this.employees.page = 1;
 
@@ -69,12 +69,13 @@ define(
 			},
 
 			deleteRecord: function(event) {
-				var id = $(event.currentTarget).data('id');
+				var element = $(event.currentTarget);
+				var id = element.data('id');
 
 				var model = new this.employees.model({ id: id });
 				model.destroy({
 					success: function() {
-						console.log(1);
+						element.parent().parent().remove();
 					}
 				});
 			}
