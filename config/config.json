@@ -1,0 +1,3 @@
+{
+  "pgConenctionString": "postgres://postgres:123@localhost/provita"
+}

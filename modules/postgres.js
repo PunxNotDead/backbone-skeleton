@@ -1,6 +1,7 @@
 var pg = require('pg');
+var config = require('../config/config.json');
 
-var connectionString = 'postgres://postgres:123@localhost/provita';
+var connectionString = config.pgConenctionString;
 
 var client = new pg.Client(connectionString);
 client.connect();

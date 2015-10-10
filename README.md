@@ -1,6 +1,6 @@
 # Test task 
 
-Using express + Backbone.js + Require.js
+Using express + Backbone.js + Require.js + Rivets.js
 
 # Install
 
@@ -17,10 +17,3 @@ Using automatic less compilation
 Run application:
 
     npm start
-
-# Testing
-
-Run
-
-	npm test
-
