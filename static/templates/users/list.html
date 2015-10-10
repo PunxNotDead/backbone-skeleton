@@ -1,0 +1,20 @@
+{{#each employees as |employee|}}
+	<tr>
+		<td>
+			{{employee.id}}
+		</td>
+		<td>
+			{{employee.name}}
+		</td>
+		<td>
+			{{employee.surname}}
+		</td>
+		<td>
+			{{employee.salary}}
+		</td>
+		<td>
+			<a href="#/user/edit/{{employee.id}}">Edit</a>
+			<a href="javascript:void(0);" data-id="{{employee.id}}" class="delete-record">Delete</a>
+		</td>
+	</tr>
+{{/each}}

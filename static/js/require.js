@@ -9,7 +9,9 @@ requirejs.config({
 		backbone: 'vendor/backbone-min',
 		text: 'vendor/text',
 		handlebars: 'vendor/handlebars-v4.0.2',
-		router: 'router'
+		rivets: 'vendor/rivets.min',
+		router: 'router',
+		sightglass: 'vendor/sightglass'
 	},
 
 	shim: {
@@ -19,12 +21,15 @@ requirejs.config({
 		underscore: {
 			exports: '_'
 		},
+		rivets: {
+			deps: ['sightglass']
+		},
 		app: {
-			deps: ['backbone', 'text', 'handlebars']
+			deps: ['backbone', 'text', 'handlebars', 'rivets']
 		}
 	}
 });
 
-requirejs(['router'], function(router) {
+requirejs(['router', 'adapters'], function(router) {
 
 });

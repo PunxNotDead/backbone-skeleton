@@ -4,7 +4,13 @@ define(
 
 	function () {
 		var Employee = Backbone.Model.extend({
-			url: "api/user"
+			urlRoot: "api/user",
+
+			defaults:{
+				name: '',
+				surname: '',
+				salary: 0
+			}
 		});
 
 		return Employee;

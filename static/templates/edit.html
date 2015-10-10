@@ -1,11 +1,11 @@
 <table cellpadding="10" cellspacing="0">
 	<tbody>
-		<tr>
+		<tr rv-show="model:id">
 			<th>
 				ID
 			</th>
 			<td>
-				<span>{{employee.id}}</span>
+				<span rv-text="model:id"></span>
 			</td>
 		</tr>
 		<tr>
@@ -13,7 +13,7 @@
 				Name
 			</th>
 			<td>
-				<input type="text" value="{{employee.name}}" class="employee-name">
+				<input type="text" class="employee-name" rv-value="model:name">
 			</td>
 		</tr>
 		<tr>
@@ -21,7 +21,7 @@
 				Surname
 			</th>
 			<td>
-				<input type="text" value="{{employee.surname}}" class="employee-surname">
+				<input type="text" class="employee-surname" rv-value="model:surname">
 			</td>
 		</tr>
 		<tr>
@@ -29,7 +29,7 @@
 				Salary
 			</th>
 			<td>
-				<input type="text" value="{{employee.salary}}" class="employee-salary">
+				<input type="number" class="employee-salary" rv-value="model:salary">
 			</td>
 		</tr>
 	</tbody>
