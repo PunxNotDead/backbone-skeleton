@@ -6,6 +6,10 @@
   "scripts": {
     "start": "nodemon app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PunxNotDead/backbone-skeleton"
+  },
   "keywords": [
     "Test",
     "File",
