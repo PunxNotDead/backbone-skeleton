@@ -24,7 +24,7 @@ requirejs.config({
 		rivets: {
 			deps: ['sightglass']
 		},
-		app: {
+		router: {
 			deps: ['backbone', 'text', 'handlebars', 'rivets']
 		}
 	}
